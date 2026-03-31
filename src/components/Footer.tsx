@@ -5,15 +5,20 @@ import logo from "../assets/shavi-logo.png";
 const Footer = () => {
   return (
     <footer className="bg-heading text-primary-foreground overflow-hidden">
-      {/* Giant brand name or Logo */}
-      <div className="container-tight px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20">
-        <div className="select-none mb-10">
-          <Link to="/" className="inline-block">
-            <img 
-              src={logo} 
-              alt="Shavi Homes" 
-              className="h-20 sm:h-28 w-auto brightness-0 invert"
-            />
+      {/* Giant brand name */}
+      <div className="container-tight px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 border-b border-white/5">
+        <div className="select-none mb-12 sm:mb-20">
+          <Link to="/" className="block group decoration-none">
+            <h2 
+              className="font-heading font-black uppercase leading-[0.85] tracking-tighter text-[#f5f0e8]"
+              style={{ 
+                fontSize: "clamp(5rem, 16vw, 16rem)", 
+                WebkitTextStroke: "2px rgba(245, 240, 232, 0.15)" 
+              }}
+            >
+              <span className="block">S<span className="text-primary">H</span>AVI</span>
+              <span className="block"><span className="text-primary">H</span>OMES</span>
+            </h2>
           </Link>
         </div>
       </div>
