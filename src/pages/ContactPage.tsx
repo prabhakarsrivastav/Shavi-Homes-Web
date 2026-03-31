@@ -26,7 +26,7 @@ const offices = [
   {
     city: "Calgary",
     address: "123 Centre Street SW, Calgary, AB T2G 1A1",
-    phone: "+1 (403) 555-1234",
+    phone: "+1 587 664 6662",
     mapQuery: "Calgary+Alberta+Canada",
   },
   {
@@ -131,9 +131,9 @@ const ContactPage = () => {
             transition={{ delay: 0.3 }}
             className="flex flex-wrap justify-center gap-8"
           >
-            <a href="tel:+14035551234" className="flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+            <a href="tel:+15876646662" className="flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors">
               <Phone className="w-5 h-5" />
-              <span className="font-medium">+1 (403) 555-1234</span>
+              <span className="font-medium">+1 587 664 6662</span>
             </a>
             <a href="mailto:info@shavihomes.com" className="flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors">
               <Mail className="w-5 h-5" />
@@ -172,7 +172,7 @@ const ContactPage = () => {
                   <div>
                     <label className="text-sm font-semibold text-heading mb-1.5 block">Phone Number *</label>
                     <Input
-                      placeholder="(403) 555-1234"
+                      placeholder="+1 587 664 6662"
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
                       className="h-12"
@@ -252,13 +252,13 @@ const ContactPage = () => {
               <div className="bg-card rounded-2xl p-8 border border-border shadow-sm">
                 <h3 className="text-xl font-heading font-bold mb-6">Contact Information</h3>
                 <div className="space-y-5">
-                  <a href="tel:+14035551234" className="flex items-start gap-4 group">
+                  <a href="tel:+15876646662" className="flex items-start gap-4 group">
                     <div className="w-12 h-12 rounded-xl bg-[#F97316]/10 flex items-center justify-center shrink-0">
                       <Phone className="w-5 h-5 text-[#F97316]" />
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">Phone</p>
-                      <p className="font-semibold text-foreground group-hover:text-[#F97316] transition-colors">+1 (403) 555-1234</p>
+                      <p className="font-semibold text-foreground group-hover:text-[#F97316] transition-colors">+1 587 664 6662</p>
                     </div>
                   </a>
                   <a href="mailto:info@shavihomes.com" className="flex items-start gap-4 group">
@@ -297,7 +297,7 @@ const ContactPage = () => {
                 <h3 className="text-xl font-heading font-bold mb-3">Need Urgent Help?</h3>
                 <p className="text-primary-foreground/70 mb-5">Call us directly for emergency maintenance or time-sensitive projects.</p>
                 <a
-                  href="tel:+14035551234"
+                  href="tel:+15876646662"
                   className="inline-flex items-center gap-2 bg-[#F97316] text-white font-bold px-6 py-3 rounded-lg hover:bg-[#EA580C] transition-colors"
                 >
                   <Phone className="w-4 h-4" />

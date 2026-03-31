@@ -120,7 +120,7 @@ const ContactForm = () => {
               <div>
                 <label className="text-sm font-semibold text-heading mb-1.5 block">Phone Number</label>
                 <Input
-                  placeholder="(403) 555-1234"
+                  placeholder="+1 587 664 6662"
                   value={form.phone}
                   onChange={(e) => setForm({ ...form, phone: e.target.value })}
                   className="h-12"

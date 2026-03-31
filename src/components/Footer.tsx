@@ -1,19 +1,20 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, User } from "lucide-react";
+import logo from "../assets/shavi-logo.png";
 
 const Footer = () => {
   return (
     <footer className="bg-heading text-primary-foreground overflow-hidden">
-      {/* Giant brand name */}
+      {/* Giant brand name or Logo */}
       <div className="container-tight px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20">
-        <div className="select-none">
-          <h2
-            className="font-heading font-black uppercase leading-[0.85] tracking-tighter text-[#f5f0e8]"
-            style={{ fontSize: "clamp(5rem, 16vw, 16rem)", WebkitTextStroke: "2px rgba(245,240,232,0.15)" }}
-          >
-            <span className="block">S<span style={{ color: "#F97316" }}>H</span>AVI</span>
-            <span className="block"><span style={{ color: "#F97316" }}>H</span>OMES</span>
-          </h2>
+        <div className="select-none mb-10">
+          <Link to="/" className="inline-block">
+            <img 
+              src={logo} 
+              alt="Shavi Homes" 
+              className="h-20 sm:h-28 w-auto brightness-0 invert"
+            />
+          </Link>
         </div>
       </div>
 
@@ -56,7 +57,7 @@ const Footer = () => {
               {[
                 { label: "WHY US", to: "/why-us" },
                 { label: "PROCESS", to: "/process" },
-                
+                { label: "BLOG", to: "/blog" },
                 { label: "TESTIMONIALS", to: "/testimonials" },
                 { label: "CONTACT", to: "/contact" },
               ].map((item) => (
@@ -102,10 +103,10 @@ const Footer = () => {
                 INFO@SHAVIHOMES.COM
               </a>
               <a
-                href="tel:+14035551234"
+                href="tel:+15876646662"
                 className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors uppercase tracking-wide"
               >
-                +1 (403) 555-1234
+                +1 587 664 6662
               </a>
               <p className="text-sm text-primary-foreground/60 uppercase tracking-wide leading-relaxed">
                 CALGARY, ALBERTA,
@@ -117,10 +118,15 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-primary-foreground/10 pt-8 sm:pt-10 flex flex-col sm:flex-row items-center justify-between gap-8 sm:gap-4 relative">
-          <p className="text-xs text-primary-foreground/30 uppercase tracking-widest font-medium order-2 sm:order-1">
-            Copyright © {new Date().getFullYear()}
-          </p>
+        <div className="border-t border-primary-foreground/10 pt-8 sm:pt-10 flex flex-col sm:flex-row items-center justify-between gap-8 sm:gap-4 relative text-center sm:text-left">
+          <div className="order-2 sm:order-1 space-y-2">
+            <p className="text-xs text-primary-foreground/30 uppercase tracking-widest font-medium">
+              Copyright © {new Date().getFullYear()} Shavi Homes.
+            </p>
+            <p className="text-[10px] text-primary-foreground/20 uppercase tracking-[0.1em] font-medium">
+              Design & Developed by <a href="https://kyptronix.us" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Kyptronix LLP</a>
+            </p>
+          </div>
 
           <Link 
             to="/admin/login" 

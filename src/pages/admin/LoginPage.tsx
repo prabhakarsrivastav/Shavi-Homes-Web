@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { Mail, Lock, LogIn, ShieldCheck } from "lucide-react";
+import logo from "../../assets/shavi-logo.png";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("admin@gmail.com");
@@ -64,11 +65,15 @@ const LoginPage = () => {
           </div>
 
           <div className="text-center mb-10 relative">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/20 rounded-3xl mb-6 border border-primary/30">
-              <LogIn className="w-10 h-10 text-primary" />
-            </div>
-            <h1 className="text-4xl font-heading font-black text-white mb-3">Admin Portal</h1>
-            <p className="text-white/40 font-medium">Enterprise Management System v1.0</p>
+            <Link to="/">
+              <img 
+                src={logo} 
+                alt="Shavi Homes" 
+                className="h-16 sm:h-20 w-auto mx-auto mb-6 brightness-0 invert"
+              />
+            </Link>
+            <h1 className="text-3xl font-heading font-black text-white mb-2">Admin Portal</h1>
+            <p className="text-white/40 font-medium text-sm">Enterprise Management System v1.0</p>
           </div>
 
           <form onSubmit={handleLogin} className="space-y-6">

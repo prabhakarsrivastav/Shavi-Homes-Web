@@ -28,7 +28,7 @@ const Hero = () => {
             Turn your basement into a legal, income-generating space without delays, rework, or permit issues.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button variant="cta" size="lg" className="text-base px-8 py-6 cta-pulse" asChild>
+            <Button variant="cta" size="lg" className="text-base px-8 py-6" asChild>
               <a href="/contact">Get Free Consultation</a>
             </Button>
             <Button variant="ctaOutline" size="lg" className="text-base px-8 py-6 border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground" asChild>

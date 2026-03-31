@@ -160,7 +160,7 @@ const CommercialPage = () => {
           <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
             Book a free consultation and get a custom plan tailored to your business needs.
           </p>
-          <Button variant="cta" size="lg" className="text-base px-10 py-6 cta-pulse" asChild>
+          <Button variant="cta" size="lg" className="text-base px-10 py-6" asChild>
             <a href="/contact">Book Free Consultation</a>
           </Button>
         </div>

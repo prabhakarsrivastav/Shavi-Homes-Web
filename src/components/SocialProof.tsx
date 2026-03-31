@@ -94,7 +94,7 @@ const SocialProof = () => {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <Button variant="cta" size="lg" className="text-base px-10 py-6 cta-pulse rounded-full mb-8" asChild>
+          <Button variant="cta" size="lg" className="text-base px-10 py-6 rounded-full mb-8" asChild>
             <a href="#" target="_blank" rel="noopener noreferrer">
               Explore Our Social Pages <ArrowRight className="w-4 h-4 ml-1" />
             </a>

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import logo from "../../assets/shavi-logo.png";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -9,10 +11,14 @@ const MobileNav = ({ onOpenSidebar }: MobileNavProps) => {
   return (
     <div className="lg:hidden flex items-center justify-between p-4 bg-[#1E3A8A] text-white">
       <div className="flex items-center gap-2">
-        <div className="w-8 h-8 bg-white/20 backdrop-blur-md rounded-lg flex items-center justify-center border border-white/30">
-          <span className="text-white font-black text-sm">S</span>
-        </div>
-        <h1 className="font-heading font-black text-white text-lg tracking-tight">SHAVI Admin</h1>
+        <Link to="/" className="flex items-center gap-2">
+          <img 
+            src={logo} 
+            alt="Shavi Homes" 
+            className="h-8 w-auto brightness-0 invert"
+          />
+          <h1 className="font-heading font-black text-white text-lg tracking-tight">Admin</h1>
+        </Link>
       </div>
       
       <Button 

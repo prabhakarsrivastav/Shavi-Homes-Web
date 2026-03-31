@@ -18,7 +18,7 @@ const FinalCTA = () => {
             Not just construction — we build legally approved, income-generating spaces. Start your project today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="cta" size="lg" className="text-base px-10 py-6 cta-pulse" asChild>
+            <Button variant="cta" size="lg" className="text-base px-10 py-6" asChild>
               <a href="/contact">Book Consultation</a>
             </Button>
             <Button variant="ctaOutline" size="lg" className="text-base px-10 py-6 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground" asChild>

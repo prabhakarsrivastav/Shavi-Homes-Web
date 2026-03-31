@@ -11,6 +11,7 @@ import ProcessPage from "./pages/ProcessPage.tsx";
 
 import TestimonialsPage from "./pages/TestimonialsPage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
+import BlogPage from "./pages/BlogPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import LoginPage from "./pages/admin/LoginPage.tsx";
 import DashboardPage from "./pages/admin/DashboardPage.tsx";
@@ -36,6 +37,7 @@ const App = () => (
           
           <Route path="/testimonials" element={<TestimonialsPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/blog" element={<BlogPage />} />
 
           {/* Admin Routes */}
           <Route path="/admin/login" element={<LoginPage />} />

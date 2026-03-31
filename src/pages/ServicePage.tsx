@@ -231,11 +231,11 @@ const ServicePage = () => {
               <p className="text-muted-foreground text-sm mb-6">
                 Get a free consultation and custom plan for your {service.title.toLowerCase()} project.
               </p>
-              <Button variant="cta" className="w-full py-6 text-base mb-3 cta-pulse" asChild>
+              <Button variant="cta" className="w-full py-6 text-base mb-3" asChild>
                 <a href={`/contact?service=${encodeURIComponent(service.title)}`}>Book Consultation</a>
               </Button>
               <Button variant="ctaOutline" className="w-full py-5" asChild>
-                <a href="tel:+14035551234">Call (403) 555-1234</a>
+                <a href="tel:+15876646662">Call +1 587 664 6662</a>
               </Button>
             </div>
           </div>

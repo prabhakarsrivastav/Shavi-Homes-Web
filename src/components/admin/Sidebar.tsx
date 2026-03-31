@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import logo from "../../assets/shavi-logo.png";
 
 interface SidebarProps {
   isOpen?: boolean;
@@ -47,15 +48,14 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
         isOpen ? "translate-x-0" : "-translate-x-full"
       )}>
         <div className="px-6 mb-10 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/30">
-              <span className="text-white font-black text-xl">S</span>
-            </div>
-            <div>
-              <h1 className="font-heading font-black text-white leading-none"><a href="/">SHAVI</a></h1>
-              <p className="text-[10px] text-white/60 tracking-widest mt-1 uppercase font-bold">Admin Panel</p>
-            </div>
-          </div>
+          <Link to="/" className="flex flex-col gap-1">
+            <img 
+              src={logo} 
+              alt="Shavi Homes" 
+              className="h-10 w-auto brightness-0 invert"
+            />
+            <p className="text-[10px] text-white/40 tracking-[0.2em] uppercase font-black pl-1">Admin Panel</p>
+          </Link>
           {onClose && (
             <Button
               variant="ghost"

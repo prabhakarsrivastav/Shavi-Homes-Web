@@ -174,7 +174,7 @@ const TestimonialsPage = () => {
           <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
             Your success story starts with a free consultation.
           </p>
-          <Button variant="cta" size="lg" className="text-base px-10 py-6 cta-pulse" asChild>
+          <Button variant="cta" size="lg" className="text-base px-10 py-6" asChild>
             <a href="/contact">Book Free Consultation</a>
           </Button>
         </div>
