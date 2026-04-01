@@ -3,12 +3,12 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
-import basementImg from "@/assets/service-basement.jpg";
-import suiteImg from "@/assets/service-secondary-suite.jpg";
-import pharmacyImg from "@/assets/service-pharmacy.jpg";
+import basementImg from "@/assets/basement.png";
+import suiteImg from "@/assets/Suite.png";
+import pharmacyImg from "@/assets/medical.png";
 import clinicImg from "@/assets/service-clinic.jpg";
 import officeImg from "@/assets/service-office.jpg";
-import spaImg from "@/assets/service-spa.jpg";
+import spaImg from "@/assets/spa.png";
 import commercialImg from "@/assets/service-commercial.jpg";
 import residentialImg from "@/assets/service-residential.jpg";
 import maintenanceImg from "@/assets/service-maintenance.jpg";

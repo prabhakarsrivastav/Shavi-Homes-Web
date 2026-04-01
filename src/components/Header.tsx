@@ -4,17 +4,29 @@ import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "../assets/shavi-logo.png";
 
-const serviceSubPages = [
-  { label: "Legal Basement", href: "/services/legal-basement" },
-  { label: "Secondary Suite", href: "/services/secondary-suite" },
-  { label: "Pharmacy Construction", href: "/services/pharmacy" },
-  { label: "Medical Clinic", href: "/services/medical-clinic" },
-  { label: "Office Construction", href: "/services/office" },
-  { label: "Spa & Wellness", href: "/services/spa-wellness" },
-  { label: "Commercial Construction", href: "/services/commercial" },
-  { label: "Residential Construction", href: "/services/residential" },
-  { label: "Maintenance Services", href: "/services/maintenance" },
-];
+const serviceCategories = {
+  residential: {
+    title: "Residential Construction",
+    links: [
+      { label: "New Construction", href: "/services/new-construction" },
+      { label: "Legal Basement", href: "/services/legal-basement" },
+      { label: "Secondary Suite", href: "/services/secondary-suite" },
+      { label: "Extension Suite", href: "/services/extension-suite" },
+      { label: "Backyard Suite", href: "/services/backyard-suite" },
+      { label: "Garage Suite", href: "/services/garage-suite" },
+    ]
+  },
+  commercial: {
+    title: "Commercial Construction",
+    links: [
+      { label: "Pharmacy Construction", href: "/services/pharmacy" },
+      { label: "Medical Clinic", href: "/services/medical-clinic" },
+      { label: "Office Construction", href: "/services/office" },
+      { label: "Spa & Wellness", href: "/services/spa-wellness" },
+      { label: "Maintenance Services", href: "/services/maintenance" },
+    ]
+  }
+};
 
 const navLinks = [
   { label: "Why Us", href: "/why-us" },
@@ -86,25 +98,37 @@ const Header = () => {
 
             {servicesOpen && (
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
-                <div className="bg-background rounded-xl shadow-xl border border-border p-2 min-w-[240px] animate-fade-in">
-                  <Link
-                    to="/#services"
-                    className="block px-4 py-2.5 text-sm font-semibold text-heading hover:bg-muted rounded-lg transition-colors"
-                    onClick={() => setServicesOpen(false)}
-                  >
-                    All Services
-                  </Link>
-                  <div className="h-px bg-border my-1" />
-                  {serviceSubPages.map((s) => (
+                <div className="bg-background rounded-[1.5rem] shadow-2xl border border-border p-8 min-w-[560px] animate-fade-in">
+                  <div className="grid grid-cols-2 gap-10">
+                    {Object.entries(serviceCategories).map(([key, category]) => (
+                      <div key={key}>
+                        <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-primary mb-5 pl-1">
+                          {category.title}
+                        </h4>
+                        <div className="space-y-1">
+                          {category.links.map((link) => (
+                            <Link
+                              key={link.href}
+                              to={link.href}
+                              className="block px-3 py-2 text-sm font-medium text-muted-foreground hover:text-heading hover:bg-muted rounded-xl transition-all duration-300"
+                              onClick={() => setServicesOpen(false)}
+                            >
+                              {link.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-8 pt-6 border-t border-border">
                     <Link
-                      key={s.href}
-                      to={s.href}
-                      className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-heading hover:bg-muted rounded-lg transition-colors"
+                      to="/#services"
+                      className="inline-flex items-center text-xs font-bold text-heading hover:text-primary transition-colors pl-1"
                       onClick={() => setServicesOpen(false)}
                     >
-                      {s.label}
+                      View All Services <ChevronDown className="w-3 h-3 ml-1 -rotate-90" />
                     </Link>
-                  ))}
+                  </div>
                 </div>
               </div>
             )}
@@ -154,23 +178,25 @@ const Header = () => {
               <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`} />
             </button>
             {mobileServicesOpen && (
-              <div className="pl-4 space-y-1 pb-2">
-                <Link
-                  to="/#services"
-                  className="block text-sm font-semibold text-heading py-1.5"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  All Services
-                </Link>
-                {serviceSubPages.map((s) => (
-                  <Link
-                    key={s.href}
-                    to={s.href}
-                    className="block text-sm text-muted-foreground py-1.5"
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    {s.label}
-                  </Link>
+              <div className="pl-4 space-y-6 pb-4 mt-2">
+                {Object.entries(serviceCategories).map(([key, category]) => (
+                  <div key={key}>
+                    <h4 className="text-[9px] font-black uppercase tracking-[0.2em] text-primary mb-3 pl-1">
+                      {category.title}
+                    </h4>
+                    <div className="space-y-1">
+                      {category.links.map((link) => (
+                        <Link
+                          key={link.href}
+                          to={link.href}
+                          className="block text-sm font-medium text-muted-foreground py-2 pl-1"
+                          onClick={() => setMobileOpen(false)}
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 ))}
               </div>
             )}

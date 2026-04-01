@@ -7,10 +7,10 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import commercialImg from "@/assets/commercial-banner.jpg";
 
-import pharmacyImg from "@/assets/service-pharmacy.jpg";
+import pharmacyImg from "@/assets/medical.png";
 import clinicImg from "@/assets/service-clinic.jpg";
 import officeImg from "@/assets/service-office.jpg";
-import spaImg from "@/assets/service-spa.jpg";
+import spaImg from "@/assets/spa.png";
 import commercialServiceImg from "@/assets/service-commercial.jpg";
 
 const commercialServices = [
